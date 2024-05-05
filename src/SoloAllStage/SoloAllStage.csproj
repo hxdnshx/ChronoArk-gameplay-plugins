@@ -40,10 +40,10 @@
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>$(GameFolder)\ChronoArk_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
-    </Reference>
+    </Reference><!--
     <Reference Include="BepInEx">
       <HintPath>$(BepInExFolder)\BepInEx.dll</HintPath>
-    </Reference>
+    </Reference>-->
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,10 +57,23 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(GameFolder)\ChronoArk_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(GameFolder)\ChronoArk_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(GameFolder)\ChronoArk_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>$(GameFolder)\ChronoArk_Data\Managed\netstandard.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SoloAllStagePlugin.cs" />
+    <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="KillAll.cs" />
+    <!--<Compile Include="BepisLoader.cs" />-->
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VersionInfo.cs" />
+    <Compile Include="WorkshopLoader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
